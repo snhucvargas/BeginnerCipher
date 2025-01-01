@@ -2,10 +2,19 @@
 //
 
 #include <iostream>
+#include <algorithm>
+#include <string>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    // Prompt the user for a message to encode.
+    std::cout << "Please enter the message you would like to have encoded. Only letters will be encoded.\n";
+    std::string input = "";
+    std::cin >> input;
+
+    // Standardize input into all upper case letters.
+    std::transform(input.begin(), input.end(), input.begin(), ::toupper);
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
